@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'kebab-ordering-tool-gui' title`, () => {
+  it(`should have the 'D-Bestell-Tool-Front-end' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('kebab-ordering-tool-gui');
+    expect(app.title).toEqual('D-Bestell-Tool-Front-end');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, kebab-ordering-tool-gui');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, D-Bestell-Tool-Front-end');
   });
 });

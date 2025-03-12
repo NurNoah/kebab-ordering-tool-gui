@@ -1,0 +1,22 @@
+
+<div id="loginbody" class="image-wrapper light-mode">
+    <div class="oneRow">
+    <h1>Anmeldung</h1>
+    </div>
+    <div class="oneRow">
+        <mat-form-field class="example-full-width">
+            <mat-label>Vorname</mat-label>
+            <input (keyup.enter)="auth.login(firstname.value, sirname.value)" #firstname matInput>
+          </mat-form-field>
+    </div>
+    <div class="oneRow">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nachname</mat-label>
+            <input (keyup.enter)="auth.login(firstname.value, sirname.value)" #sirname matInput>
+          </mat-form-field>
+    </div>
+    <div class="oneRow">
+     <button (click)="auth.login(firstname.value, sirname.value)" mat-raised-button>Anmelden <mat-icon>login</mat-icon></button>
+    </div>
+
+  </div>

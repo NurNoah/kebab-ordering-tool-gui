@@ -1,0 +1,11 @@
+<header id="headerBody" class="light-mode">
+  <div class="main">
+    <a>
+      <img (click)="goTo('/home')" routerLink="/home" class="logo" src="assets/img/mainIcon.png" />
+      <span class="brand-name"></span>
+    </a>
+    <button mat-icon-button matTooltip="Your order" (click)="pop.openSettingsDialog()" class="shopcart"><mat-icon [matBadgeHidden]="hideBadge()" matBadge="{{pop.orderId.length}}" matBadgeColor="warn" matBadgeSize="small" class="material-icons-outlined" fontIcon="shopping_cart"></mat-icon></button>
+    <button mat-icon-button matTooltip="Admin view" (click)="goTo('/admin')"><mat-icon fontIcon="admin_panel_settings" class="material-icons-outlined"></mat-icon></button>
+    <button mat-icon-button matTooltip="Contrast" (click)="ds.toggleDarkmode()" class="darkmodebutton"><mat-icon fontIcon="contrast"></mat-icon></button>
+  </div>
+</header>

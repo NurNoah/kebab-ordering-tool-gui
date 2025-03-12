@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+body{
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden;
+}
+.array-container {
+    height: 150px;
+    width: 700px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4caf50;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stapelt die Elemente vertikal */
+  }
+  
+  .array-item {
+    padding: 2px;
+    border-bottom: 1px solid #4caf50;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr repeat(2, 1fr);
+  }
+  
+  .array-item:hover {
+    background-color: #4caf4f1f;
+  }
+  
+  .array-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    //flex: 1; /* Jedes Element nimmt gleich viel Platz ein */
+  }
+  
+  .dark-mode .array-container {
+    background-color: #212324;
+  }
+  
+  .legend {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 0.5fr;
+  }
+  
+  .legend-item {
+    padding: 10px;
+    font-weight: bold;
+    
+  }
+
+  h1{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    margin: 10px;
+  }
+  .checkoutbutton{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 10px;
+    width: 250px;
+  }
+
+  .checkout{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
+  }
+
+  .gesamt{
+    text-align: center;
+    padding: 10px;
+  }
+
+  mat-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: auto;
+    height: auto;
+
+  }
+
+
+  .head {
+    display: flex;
+    align-items: center;
+  }
+  
+  .head h1 {
+    flex-grow: 1; /* Das h1-Element dehnt sich aus, um den verfügbaren Platz zu füllen */
+    text-align: center; /* Zentriert den Text innerhalb des h1-Elements */
+    margin: 0; /* Entfernen Sie die Standardmargen des h1-Elements */
+  }
+  
+  .head button {
+    margin-left: auto; /* Verschieben Sie das Element auf die rechte Seite, indem Sie den linken Rand auf "auto" setzen */
+  }

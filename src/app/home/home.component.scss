@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column; /* Ändert die Ausrichtung auf Spalten, wenn die Bildschirmbreite kleiner als 600px ist */
+  }
+}
+
+.smallCard{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

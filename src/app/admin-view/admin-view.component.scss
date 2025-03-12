@@ -1,0 +1,25 @@
+/* Stil für die Tabelle */
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Stil für die Tabellenzeilen */
+tr {
+  border-bottom: 3px solid #dddddd;
+}
+tbody :hover{
+  background-color: #8181819b;
+
+}
+
+/* Stil für die Tabellenzellen */
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Stil für den ersten Tabellenkopf (Überschriften) */
+

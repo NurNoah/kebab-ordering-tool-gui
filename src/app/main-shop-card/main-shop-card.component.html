@@ -1,0 +1,63 @@
+
+    <div id={{id}} class="image-wrapper light-mode" matTooltip="{{price.toFixed(2)}}€">
+      <div class="twoRow">
+        <img src={{img}} alt="doener">
+        <span>{{titel}}</span>
+      </div>
+      <div class="twoRow">
+       
+           
+            <mat-form-field class="sizefromfild">
+              <mat-label>Größe</mat-label>
+              <mat-select [(ngModel)]="selectedSize" name="size" (selectionChange)="changePrice()">
+                <mat-option value="Klein" disabled="{{disablesamll()}}">Klein</mat-option>
+                <mat-option value="Groß" >Groß</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="meatfromfild">
+                <mat-label>Fleisch</mat-label>
+                <mat-select [(ngModel)]="selectedMeat" name="size">
+                  <mat-option value="Kalb">Kalb</mat-option>
+                  <mat-option value="Pute">Pute</mat-option>
+                </mat-select>
+              </mat-form-field>
+         
+      
+      </div>
+      <div class="oneRow">
+        <mat-form-field class="fullL">
+          <mat-label>Sauce</mat-label>
+          <mat-select [(ngModel)]="selectedSauce" (selectionChange)="checkSelection()" name="sauce" multiple>
+            <mat-option value="ohne Sauce">Ohne Sauce</mat-option>
+            <mat-option value="Joghurtsauce">Joghurtsauce</mat-option>
+            <mat-option value="Knoblauch-Joghurtsauce">Knoblauch-Joghurtsauce</mat-option>
+            <mat-option value="Chili-Cocktail Sauce">Chili-Cocktail Sauce</mat-option>
+            <mat-option value="Curry-Mango Sauce">Curry-Mango Sauce</mat-option>
+            <mat-option value="Spicy Mayonnaise Sauce">Spicy Mayonnaise Sauce</mat-option>
+            <mat-option value="Mississippi Potatoes Sauce">Mississippi Potatoes Sauce</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="oneRow">
+        <mat-form-field class="fullL">
+            <mat-label>Extras</mat-label>
+            <mat-select [(ngModel)]="selectedExtras" name="sauce" multiple>
+                <mat-option value="Scharf">Scharf</mat-option>
+                <mat-option value="ohne Eisbergsalat">Ohne Eisbergsalat</mat-option>
+                <mat-option value="ohne Rotkohl">Ohne Rotkohl</mat-option>
+                <mat-option value="ohne Weißkraut">Ohne Weißkraut</mat-option>
+                <mat-option value="ohne Peperoni">Ohne Peperoni</mat-option>
+                <mat-option value="ohne Tomaten">Ohne Tomaten</mat-option>
+                <mat-option value="ohne Zwiebeln">Ohne Zwiebeln</mat-option>
+                <mat-option value="nicht verbrannt">Nicht verbrannt</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+      </div>
+      <div class="twoRow">
+        <button  (click)="chekout()" class="checkoutbutton" mat-raised-button> <mat-icon>shopping_cart_checkout</mat-icon> Sofort kaufen</button>
+        <button (click)="addtoCart()" class="addcardbutton" mat-raised-button> <mat-icon>add_shopping_cart</mat-icon> in den Warenkorb </button>
+
+      </div>
+    </div>

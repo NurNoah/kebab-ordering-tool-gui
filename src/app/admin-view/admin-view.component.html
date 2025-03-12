@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Customer Name</th>
+      <th>Product</th>
+      <th>Sauce 1</th>
+      <th>Sauce 2</th>
+      <th>Meat</th>
+      <th>Size</th>
+      <th>Special Wishes</th>
+      <th>Special Instructions</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.date | date: 'dd.MM.yyyy HH:mm' || '/' }}</td>
+      <td>{{ order.customerEntity?.forname || '/' }} {{ order.customerEntity?.surname || '/' }}</td>
+      <td>{{ order.configurationEntity?.productEntity?.product || '/' }}</td>
+      <td>{{ order.configurationEntity?.sauceEntity1?.sauce || '/' }}</td>
+      <td>{{ order.configurationEntity?.sauceEntity2?.sauce || '/' }}</td>
+      <td>{{ order.configurationEntity?.meatEntity?.meat || '/' }}</td>
+      <td>{{ order.configurationEntity?.productEntity?.size || '0' }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let wish of order.configurationEntity?.specialWhishes">{{ wish.wish }}</li>
+        </ul>
+      </td>
+      <td>{{ order.configurationEntity?.specialInstruction || '/' }}</td>
+      <td>{{ order.configurationEntity?.price || '/' }}</td>
+    </tr>
+  </tbody>
+</table>

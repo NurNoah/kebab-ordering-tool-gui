@@ -1,0 +1,45 @@
+<body id="shopcardPopUpBody" class="light-mode">
+<div class="head">
+<h1>Bestellungen</h1>
+<button mat-icon-button color="warn" (click)="closeDialog()"><mat-icon>close</mat-icon></button> 
+</div>
+<div class="legend">
+    <div class="legend-item">Name</div>
+    <div class="legend-item">Soße</div>
+    <div class="legend-item">Extras</div>
+    <div class="legend-item">Preis</div>
+    <div class="legend-item">Löschen</div>
+  </div>
+  
+<div class="array-container">
+    <p-scrollPanel [style]="{height: '150px' }">
+  <div *ngFor="let order of shopcard.orderId; let i = index" class="array-item">
+    <div class="item">
+      <a>{{shopcard.orderName[i] }} ({{shopcard.smallbig(i)}})</a>
+    </div>
+    <div class="item">
+      <a>{{shopcard.orderSos[i]}}</a>
+    </div>
+    <div class="item">
+      <a>{{shopcard.extraSpec(i)}}</a>
+    </div>
+    <div class="item">
+      <a>{{shopcard.orderPrice[i].toFixed(2)}}€</a>
+    </div>
+    <div class="item">
+        <a (click)="shopcard.removeElement(i)"><mat-icon class="material-icons-outlined">delete</mat-icon></a>
+      </div>
+  </div>
+</p-scrollPanel>
+</div>
+<div class="gesamt">
+    <a>Gesamt Preis: </a>
+    <a>{{shopcard.sumOfArray(shopcard.orderPrice).toFixed(2)}}€</a>
+  </div>
+
+
+<div class="checkout">
+<a>Bestellt als: {{shopcard.cusFirstName}} {{shopcard.cusSirName}}</a>
+<button (click)="shopcard.pushtoSQL()" class="checkoutbutton" mat-raised-button> <mat-icon>shopping_cart_checkout</mat-icon>Kauf abschließen</button>
+</div>
+</body>

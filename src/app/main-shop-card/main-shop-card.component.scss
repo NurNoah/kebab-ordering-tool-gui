@@ -1,0 +1,75 @@
+
+  .image-wrapper {    
+    border-radius: 20px;
+    width: 350px;
+    padding: 14px 14px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; /* Übergang für den Schatten */
+  }
+
+  .image-wrapper:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Größerer und sichtbarer Schatten beim Hover */
+  }
+
+  .light-mode{
+    background-color: #e4e4e4;;
+    color: #000000;
+  }
+
+  .dark-mode{
+    background-color: #111213;
+    color: #fff;
+  }
+
+  .oneRow{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .twoRow{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  img{
+    height: 100px;
+  }
+
+  span{
+    
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+
+  }
+
+  .sizefromfild{
+  margin-right: 5px;
+}
+
+.meatfromfild{
+    margin-left: 5px;
+}
+
+.checkoutbutton{
+    margin-right: 5px;
+}
+
+.addcardbutton{
+    margin-left: 5px;
+}
+
+.fullL{
+    
+    display: flex;
+    min-width: 350px;
+    
+  
+}
